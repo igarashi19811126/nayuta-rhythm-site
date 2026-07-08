@@ -1118,6 +1118,11 @@ img {
     padding-bottom: var(--section-tight-space);
   }
 
+  .gallery-section.reveal {
+    opacity: 1;
+    transform: none;
+  }
+
   .gallery-piece {
     margin-bottom: clamp(18px, 6vw, 30px);
   }
