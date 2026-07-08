@@ -974,6 +974,17 @@ img {
   transform: translateY(0);
 }
 
+.members-section.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.members-section .member-profile > div {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1297,12 +1308,22 @@ img {
   }
 
   .member-profile img {
-    min-height: min(62vw, 300px);
-    max-height: 56svh;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    max-height: 250px;
   }
 
   .member-profile h3 {
     margin: 6px 0 8px;
+  }
+
+  .member-profile div {
+    gap: 9px;
+  }
+
+  .member-likes {
+    margin-top: 4px;
+    padding-top: 10px;
   }
 
   .contact-section {
