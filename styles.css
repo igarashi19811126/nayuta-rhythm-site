@@ -1022,7 +1022,7 @@ img {
 
 @media (max-width: 739px) {
   :root {
-    --section-space: clamp(16px, 4vw, 34px);
+    --section-space: clamp(8px, 3vw, 24px);
     --heading-space: clamp(16px, 4vw, 26px);
   }
 
@@ -1032,7 +1032,11 @@ img {
   }
 
   .hero-content {
-    padding: 98px 0 24px;
+    padding: 98px 0 8px;
+  }
+
+  .reveal {
+    transform: translateY(10px);
   }
 
   .hero-copy {
