@@ -20,7 +20,7 @@
     <title>なゆたリズム | 音と絵が交わる公式サイト</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://open.spotify.com" />
-    <link rel="stylesheet" href="styles.css?v=20260708-live-flyer-v10" />
+    <link rel="stylesheet" href="styles.css?v=20260708-youtube-menu-v11" />
   </head>
   <body>
     <a class="skip-link" href="#about">本文へ移動</a>
@@ -262,10 +262,20 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
               問い合わせる
             </a>
-            <a class="button button-quiet icon-button" href="https://youtu.be/my8NFSot_Vs">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h14v11H5z"/><path d="m10 9 5 3-5 3z"/></svg>
-              YouTube
-            </a>
+            <div class="youtube-picker" data-youtube-picker>
+              <button class="button button-quiet icon-button" type="button" aria-expanded="false" aria-controls="youtube-menu" data-youtube-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h14v11H5z"/><path d="m10 9 5 3-5 3z"/></svg>
+                YouTube
+              </button>
+              <div class="youtube-menu" id="youtube-menu" hidden data-youtube-menu>
+                <a href="#" data-pending-link>YouTubeチャンネル</a>
+                <a href="https://youtu.be/my8NFSot_Vs">ないものねだり</a>
+                <a href="https://youtu.be/BkhrYlnSdwc">ライブ映像 01</a>
+                <a href="https://youtu.be/Fz5E6OEyFX0">ライブ映像 02</a>
+                <a href="https://youtu.be/K9UUtu_fSV8">ライブ映像 03</a>
+                <p class="youtube-menu-status" aria-live="polite" data-youtube-status></p>
+              </div>
+            </div>
             <a class="button button-quiet icon-button" href="https://open.spotify.com/album/3uCcKP15fva9K0MzTCRxSX?si=iYip_5fKQfqmBXg00TKTHQ">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 10c2.8-.8 5.7-.5 8 .8M8.8 13c2-.5 4.4-.3 6.1.7M9.4 15.7c1.4-.3 3-.2 4.2.4"/></svg>
               Spotify
@@ -294,7 +304,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="footer-social" aria-label="SNSリンク">
-        <a href="https://youtu.be/my8NFSot_Vs">YouTube</a>
+        <a href="#contact">YouTube</a>
         <a href="https://open.spotify.com/album/3uCcKP15fva9K0MzTCRxSX?si=iYip_5fKQfqmBXg00TKTHQ">Spotify</a>
       </div>
       <p class="footer-copy">© なゆたリズム</p>

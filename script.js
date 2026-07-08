@@ -2,6 +2,10 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const header = document.querySelector("[data-header]");
 const mailLinks = document.querySelectorAll("[data-mail-link]");
+const youtubePicker = document.querySelector("[data-youtube-picker]");
+const youtubeToggle = document.querySelector("[data-youtube-toggle]");
+const youtubeMenu = document.querySelector("[data-youtube-menu]");
+const youtubeStatus = document.querySelector("[data-youtube-status]");
 const revealItems = document.querySelectorAll(".reveal");
 const galleryItems = document.querySelectorAll("[data-lightbox]");
 const lightbox = document.querySelector("[data-lightbox-modal]");
@@ -18,6 +22,39 @@ const reservationMail = {
 mailLinks.forEach((link) => {
   const href = `mailto:${reservationMail.to}?subject=${encodeURIComponent(reservationMail.subject)}&body=${encodeURIComponent(reservationMail.body)}`;
   link.setAttribute("href", href);
+});
+
+const closeYoutubeMenu = () => {
+  if (!youtubeMenu || !youtubeToggle) return;
+  youtubeMenu.hidden = true;
+  youtubeToggle.setAttribute("aria-expanded", "false");
+};
+
+youtubeToggle?.addEventListener("click", () => {
+  if (!youtubeMenu) return;
+  const willOpen = youtubeMenu.hidden;
+  youtubeMenu.hidden = !willOpen;
+  youtubeToggle.setAttribute("aria-expanded", String(willOpen));
+  if (youtubeStatus) youtubeStatus.textContent = "";
+});
+
+youtubeMenu?.addEventListener("click", (event) => {
+  const link = event.target instanceof Element ? event.target.closest("a") : null;
+  if (!link) return;
+
+  if (link.getAttribute("href") === "#") {
+    event.preventDefault();
+    if (youtubeStatus) youtubeStatus.textContent = "準備中";
+    return;
+  }
+
+  closeYoutubeMenu();
+});
+
+document.addEventListener("click", (event) => {
+  if (!youtubePicker || !youtubeMenu || youtubeMenu.hidden) return;
+  if (event.target instanceof Node && youtubePicker.contains(event.target)) return;
+  closeYoutubeMenu();
 });
 
 navToggle?.addEventListener("click", () => {
@@ -112,6 +149,7 @@ lightbox?.addEventListener("click", (event) => {
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
+  if (event.key === "Escape") closeYoutubeMenu();
 });
 
 onScroll();
