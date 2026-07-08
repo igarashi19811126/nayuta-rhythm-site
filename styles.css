@@ -1026,6 +1026,39 @@ img {
     --heading-space: clamp(16px, 4vw, 26px);
   }
 
+  #top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero {
+    order: 0;
+  }
+
+  .about-section {
+    order: 1;
+  }
+
+  .music-section {
+    order: 2;
+  }
+
+  .gallery-section {
+    order: 3;
+  }
+
+  .live-section {
+    order: 4;
+  }
+
+  .members-section {
+    order: 5;
+  }
+
+  .contact-section {
+    order: 6;
+  }
+
   .hero,
   .hero-content {
     min-height: 82svh;
