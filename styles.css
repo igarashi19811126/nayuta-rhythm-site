@@ -1028,11 +1028,11 @@ img {
 
   .hero,
   .hero-content {
-    min-height: 88svh;
+    min-height: 82svh;
   }
 
   .hero-content {
-    padding: 104px 0 48px;
+    padding: 98px 0 24px;
   }
 
   .hero-copy {
