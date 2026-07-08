@@ -1022,41 +1022,10 @@ img {
 
 @media (max-width: 739px) {
   :root {
-    --section-space: clamp(8px, 3vw, 24px);
+    --section-space: clamp(22px, 7vw, 40px);
     --heading-space: clamp(16px, 4vw, 26px);
-  }
-
-  #top {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero {
-    order: 0;
-  }
-
-  .about-section {
-    order: 1;
-  }
-
-  .music-section {
-    order: 2;
-  }
-
-  .gallery-section {
-    order: 3;
-  }
-
-  .live-section {
-    order: 4;
-  }
-
-  .members-section {
-    order: 5;
-  }
-
-  .contact-section {
-    order: 6;
+    --section-tight-space: clamp(12px, 4vw, 24px);
+    --content-gap: clamp(18px, 5vw, 30px);
   }
 
   .hero,
@@ -1111,11 +1080,11 @@ img {
   }
 
   .about-section {
-    padding-bottom: clamp(12px, 4vw, 22px);
+    padding-bottom: var(--section-tight-space);
   }
 
   .about-layout {
-    gap: clamp(22px, 6vw, 34px);
+    gap: var(--content-gap);
   }
 
   .wide-photo img {
@@ -1124,12 +1093,12 @@ img {
   }
 
   .music-section {
-    padding-top: clamp(14px, 4vw, 24px);
-    padding-bottom: clamp(8px, 3vw, 18px);
+    padding-top: var(--section-tight-space);
+    padding-bottom: var(--section-tight-space);
   }
 
   .music-showcase {
-    gap: clamp(18px, 5vw, 28px);
+    gap: var(--content-gap);
   }
 
   .music-panel {
@@ -1145,8 +1114,8 @@ img {
   }
 
   .gallery-section {
-    padding-top: clamp(12px, 4vw, 22px);
-    padding-bottom: clamp(8px, 3vw, 18px);
+    padding-top: var(--section-tight-space);
+    padding-bottom: var(--section-tight-space);
   }
 
   .gallery-piece {
@@ -1162,12 +1131,12 @@ img {
   }
 
   .live-section {
-    padding-top: clamp(12px, 3vw, 22px);
-    padding-bottom: clamp(10px, 3vw, 20px);
+    padding-top: var(--section-tight-space);
+    padding-bottom: var(--section-tight-space);
   }
 
   .live-board {
-    gap: clamp(18px, 5vw, 28px);
+    gap: var(--content-gap);
   }
 
   .live-visual img {
@@ -1198,12 +1167,12 @@ img {
   }
 
   .members-section {
-    padding-top: clamp(12px, 4vw, 22px);
-    padding-bottom: clamp(12px, 4vw, 22px);
+    padding-top: var(--section-tight-space);
+    padding-bottom: var(--section-tight-space);
   }
 
   .member-list {
-    gap: clamp(18px, 5vw, 30px);
+    gap: var(--content-gap);
   }
 
   .member-profile {
@@ -1220,8 +1189,8 @@ img {
   }
 
   .contact-section {
-    padding-top: clamp(8px, 3vw, 18px);
-    padding-bottom: clamp(12px, 3vw, 22px);
+    padding-top: var(--section-tight-space);
+    padding-bottom: var(--section-tight-space);
   }
 
   .contact-shell {
