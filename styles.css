@@ -1022,21 +1022,21 @@ img {
 
 @media (max-width: 739px) {
   :root {
-    --section-space: clamp(20px, 5vw, 44px);
-    --heading-space: clamp(18px, 5vw, 30px);
+    --section-space: clamp(16px, 4vw, 34px);
+    --heading-space: clamp(16px, 4vw, 26px);
   }
 
   .hero,
   .hero-content {
-    min-height: 94svh;
+    min-height: 88svh;
   }
 
   .hero-content {
-    padding: 110px 0 70px;
+    padding: 104px 0 48px;
   }
 
   .hero-copy {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .hero-note {
@@ -1045,7 +1045,7 @@ img {
 
   .hero-actions,
   .contact-actions {
-    margin-top: 22px;
+    margin-top: 18px;
   }
 
   .scroll-cue {
@@ -1058,7 +1058,7 @@ img {
   }
 
   .section-kicker {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .section-heading {
@@ -1066,15 +1066,15 @@ img {
   }
 
   .story-intro {
-    margin-bottom: clamp(20px, 5vw, 28px);
+    margin-bottom: clamp(16px, 4vw, 24px);
   }
 
   .wide-photo {
-    margin-top: clamp(18px, 5vw, 28px);
+    margin-top: clamp(14px, 4vw, 22px);
   }
 
   .about-section {
-    padding-bottom: clamp(18px, 5vw, 30px);
+    padding-bottom: clamp(12px, 4vw, 22px);
   }
 
   .about-layout {
@@ -1087,8 +1087,8 @@ img {
   }
 
   .music-section {
-    padding-top: clamp(22px, 5vw, 34px);
-    padding-bottom: clamp(14px, 4vw, 26px);
+    padding-top: clamp(14px, 4vw, 24px);
+    padding-bottom: clamp(8px, 3vw, 18px);
   }
 
   .music-showcase {
@@ -1108,12 +1108,16 @@ img {
   }
 
   .gallery-section {
-    padding-top: clamp(18px, 5vw, 30px);
-    padding-bottom: clamp(14px, 4vw, 24px);
+    padding-top: clamp(12px, 4vw, 22px);
+    padding-bottom: clamp(8px, 3vw, 18px);
   }
 
   .gallery-piece {
     margin-bottom: clamp(18px, 6vw, 30px);
+  }
+
+  .gallery-piece:last-child {
+    margin-bottom: 0;
   }
 
   .gallery-piece figcaption {
@@ -1121,8 +1125,8 @@ img {
   }
 
   .live-section {
-    padding-top: clamp(18px, 4vw, 30px);
-    padding-bottom: clamp(16px, 4vw, 28px);
+    padding-top: clamp(12px, 3vw, 22px);
+    padding-bottom: clamp(10px, 3vw, 20px);
   }
 
   .live-board {
@@ -1157,8 +1161,8 @@ img {
   }
 
   .members-section {
-    padding-top: clamp(18px, 5vw, 30px);
-    padding-bottom: clamp(18px, 5vw, 30px);
+    padding-top: clamp(12px, 4vw, 22px);
+    padding-bottom: clamp(12px, 4vw, 22px);
   }
 
   .member-list {
@@ -1179,18 +1183,18 @@ img {
   }
 
   .contact-section {
-    padding-top: clamp(14px, 4vw, 24px);
-    padding-bottom: clamp(16px, 4vw, 26px);
+    padding-top: clamp(8px, 3vw, 18px);
+    padding-bottom: clamp(12px, 3vw, 22px);
   }
 
   .contact-shell {
     gap: 18px;
-    padding: clamp(18px, 5vw, 24px);
+    padding: clamp(16px, 4vw, 22px);
   }
 
   .site-footer {
     gap: 16px;
-    padding-top: clamp(22px, 6vw, 36px);
+    padding-top: clamp(16px, 5vw, 28px);
     padding-bottom: 34px;
   }
 }
