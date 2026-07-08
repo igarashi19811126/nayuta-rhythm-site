@@ -643,6 +643,22 @@ img {
   letter-spacing: 0.08em;
 }
 
+.member-group-photo {
+  margin: 0 0 clamp(28px, 6vw, 72px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 38px 100px rgba(0, 0, 0, 0.58);
+}
+
+.member-group-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 44%;
+}
+
 .member-list {
   display: grid;
   gap: clamp(28px, 7vw, 92px);
@@ -656,9 +672,11 @@ img {
 
 .member-profile img {
   width: 100%;
-  min-height: min(72vw, 360px);
-  max-height: 72svh;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  max-height: min(72svh, 420px);
   object-fit: cover;
+  object-position: center;
   transition: transform 0.7s var(--ease), opacity 0.7s var(--ease);
 }
 
@@ -1297,6 +1315,14 @@ img {
   .members-section {
     padding-top: var(--section-tight-space);
     padding-bottom: var(--section-tight-space);
+  }
+
+  .member-group-photo {
+    margin-bottom: var(--content-gap);
+  }
+
+  .member-group-photo img {
+    max-height: 260px;
   }
 
   .member-list {
