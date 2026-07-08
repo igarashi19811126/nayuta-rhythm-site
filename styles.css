@@ -754,6 +754,19 @@ img {
   margin-top: 24px;
 }
 
+.live-flyer {
+  margin: 28px 0 0;
+  cursor: zoom-in;
+}
+
+.live-flyer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+
 .live-empty {
   min-height: 220px;
   padding: clamp(24px, 5vw, 42px);
