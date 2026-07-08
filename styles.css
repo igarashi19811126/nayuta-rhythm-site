@@ -1020,6 +1020,46 @@ img {
   }
 }
 
+@media (max-width: 739px) {
+  :root {
+    --section-space: clamp(70px, 18vw, 92px);
+    --heading-space: clamp(34px, 9vw, 48px);
+  }
+
+  .music-section {
+    padding-bottom: clamp(34px, 9vw, 46px);
+  }
+
+  .music-showcase {
+    gap: clamp(26px, 8vw, 38px);
+  }
+
+  .music-panel {
+    padding: clamp(20px, 6vw, 26px);
+  }
+
+  .video-links {
+    margin-top: 14px;
+  }
+
+  .gallery-section {
+    padding-top: clamp(38px, 10vw, 52px);
+    padding-bottom: clamp(46px, 12vw, 64px);
+  }
+
+  .gallery-piece {
+    margin-bottom: clamp(30px, 9vw, 44px);
+  }
+
+  .live-section {
+    padding-top: clamp(48px, 12vw, 66px);
+  }
+
+  .live-board {
+    gap: clamp(24px, 7vw, 34px);
+  }
+}
+
 @media (min-width: 1080px) {
   .site-nav a {
     padding: 8px 14px;
